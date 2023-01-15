@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .alert {
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-color: azure;">
+    <div class="container" style="height: fit-content;">
+        <h2>Open an Alert by clicking this button</h2>
+        <button class="btn btn-info btn-sm'">Alert</button>
+        <div class="alert alert-success alert-dismissable" style="box-shadow: none;border: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Success! message sent successfully.
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('.alert').show()
+            })
+        });
+    </script>
+    <a href="localhost/project/pages/st dashboad.php">click me</a>
+</body>
+</html>
+<!-- Sidebar -->
