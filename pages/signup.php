@@ -262,7 +262,7 @@
 
                         mysqli_query($con,$sql_insert);
                              
-                        }
+                        
                         $headers = "From: 2019t00430@stu.cmb.ac.lk\r\n";
                         $to = $email ;
 
@@ -281,7 +281,7 @@
                             ?><script>alert("Login details are not sent successfully")</script><?php
                         }
                             $con->close();
-                           
+                      }
                             ?>
           <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->

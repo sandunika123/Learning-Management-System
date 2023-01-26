@@ -69,7 +69,7 @@
                           <input class="btn btn-primary" type="submit" name="submit" value="login"></button>
                         </div>
                      
-                        <a class="small text-muted" href="forgot-password.html">Forgot password?</a> <br><br>
+                        <a class="small text-muted" href="forgot-password.php">Forgot password?</a> <br><br>
                         <p>Don't have an account? <a href="signup.html" class="link-info">Register here</a></p>
                            
 

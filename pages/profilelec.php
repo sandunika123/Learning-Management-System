@@ -44,7 +44,7 @@ if (isset($_POST['upload'])) {
  
  cursor: pointer;}
  .card:hover{
-    transform: scale(1.05);
+    
  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
@@ -146,20 +146,19 @@ if (isset($_POST['upload'])) {
       
           <div class="row">
             <div class="col-lg-4">
-              <div class="card mb-4" style="pointer-events: none;">
+              <div class="card mb-4">
                 <div class="card-body text-center">
                 <img class="img-profile rounded-circle"
                                     src="./image/<?php echo $_SESSION['photo']; ?>" width="200" height="200">
                   <h5 class="my-3"><?php echo $_SESSION['fname'];?>&nbsp;<?php echo $_SESSION['lname'];?></h5>
                   <p class="text-muted mb-1"><?php echo $_SESSION['qualification'];?></p>
-                  <div class="d-flex justify-content-center mb-2">
-                    
-                  </div>
+                  
                 </div>
               </div>
+              
             </div>
             <div class="col-lg-8">
-              <div class="card mb-4" style="pointer-events: none;">
+              <div class="card mb-4" >
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
@@ -203,76 +202,42 @@ if (isset($_POST['upload'])) {
                   <hr>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card mb-4 mb-md-0" style="pointer-events: none;">
-                    <div class="card-body">
-                      <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                      </p>
-                      <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                      <div class="progress rounded mb-2" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
+              
+                
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="card mb-4 mb-md-0" style="pointer-events: none;">
-                    <div class="card-body">
-                      <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                      </p>
-                      <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                      <div class="progress rounded mb-2" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+                <div class="row" style="padding-left: 10px;">
+          <div class="card w-80">
+  <div class="card-body">
+    <h5 class="card-title">Change Subject Profile Picture</h5>
+    <form method="POST" action="" enctype="multipart/form-data">
+            
+			<div class="form-group">
+      <div class="form-group">
+				<input class="form-control" type="text" name="title" value=""required placeholder="enter title"/>
+			</div>
+				<input class="form-control" type="file" name="uploadfile" value="" required/>
+			</div>
+			<!-- <div class="form-group"> -->
+				<button class="btn btn-primary" type="submit" name="upload" required>UPLOAD</button>
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Success! message sent successfully.
+        </div>
+        
+			</div>
+		</form>
+    
+  </div>
+</div>
               </div>
+              
             </div>
+            
           </div>
+          
+    </div>
         </div>
       </section>
 

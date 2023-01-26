@@ -122,9 +122,9 @@
           </div></div>
 <!-- side navigation -->
   <div class="row p-3">
-    <div class="col ">
+    <div class="col">
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar  collapse " >
-    <div class="position-sticky" style= "height: 400px; overflow-y: scroll;">
+    <div class="position-sticky" style= "height: 400px; ">
         
           <a href="" class="list-group-item list-group-item-action py-4 ripple" aria-current="true">
             <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span>
@@ -137,39 +137,46 @@
 </svg>&nbsp;&ensp;&ensp;<span>Site home</span>
           </a>
           <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
-            <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-globe fa-fw me-3"></i><span>International</span></a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-building fa-fw me-3"></i><span>Partners</span></a>
+              class="fas fa-lock fa-fw me-3"></i><span>Private files</span></a>
           <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
               class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-users fa-fw me-3"></i><span>Users</span></a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+</svg>&ensp;&ensp;<span>Grade</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+</svg>&ensp;&ensp;<span>My courses</span>
+          </a>
+          <a href="subject1.php" class="list-group-item list-group-item-action py-2 ripple">&ensp;<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+</svg>&ensp;&ensp;<span><span><?php echo $_SESSION['sub1']?></span></a>
+<a href="subject2.php" class="list-group-item list-group-item-action py-2 ripple">&ensp;<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+</svg>&ensp;&ensp;<span><span><?php echo $_SESSION['sub2']?></span></a>
+<a href="subject3.php" class="list-group-item list-group-item-action py-2 ripple">&ensp;<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+</svg>&ensp;&ensp;<span><span><?php echo $_SESSION['sub3']?></span></a>
         
       </div>
     </nav>    
     </div>
-      <div class="col-7">
+      <div class="col-7" style="background-color: white;">
         <div class="row p-3">
+      
         <div class="card-deck">
-          <div class="card" ><a href="subject.php"style="text-decoration: none;">
-           <img class="card-img-top" src="../img/carasel2.jpg" alt="Card image cap" >
+          <div class="card" ><a href="subject1.php"style="text-decoration: none;">
+           <img class="card-img-top" src="../img/sub 1.jpg" alt="Card image cap" >
             <div class="card-body">
               <h5 class="card-title"><?php echo $sub1?></h5>
             </div></a>
           </div>
-          <div class="card" ><a href="subject.php" style="text-decoration: none;">
-            <img class="card-img-top" src="../img/carasel2.jpg" alt="Card image cap">
+          <div class="card" ><a href="subject2.php" style="text-decoration: none;">
+            <img class="card-img-top" src="../img/sub 2.webp" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><?php echo $sub2?></h5>
             </div></a>
@@ -178,25 +185,43 @@
         </div>
         <div class="row p-3">
         <div class="card-deck">
-          <div class="card"  ><a href="subject.php" style="text-decoration: none;">
-            <img class="card-img-top" src="../img/carasel2.jpg" alt="Card image cap">
+          <div class="card"  ><a href="subject3.php" style="text-decoration: none;">
+            <img class="card-img-top" src="../img/sub 3.webp" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><?php echo $sub3?></h5>
             </div></a>
           </div>
-          <div class="card"style="box-shadow: none;border: none;background-color: #eee; pointer-events: none;">
+          <div class="card"style="box-shadow: none;border: none;background-color: white; pointer-events: none;">
           
             
           </div>
         </div>
         </div>
+        
     </div>
     
+    
       
-      
+    
     <div class="col">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body">
+        <h5 class="card-title">Private files</h5>
+    
+        <p class="card-text">No files available</p><br>
+        <a href="">Manage private files..</a>
+      </div>
+    </div><br>
+    <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <h5 class="card-title">Latest badges</h5>
       
+          <p class="card-text">You have no badges to display</p><br>
+          
+        </div>
     </div>
+    </div>
+    
   </div>
     
 <!-- sider Navigation -->

@@ -1,94 +1,54 @@
 <?php
-error_reporting(0);
-
-$msg = "";
-
-// If upload button is clicked ...
-if (isset($_POST['upload'])) {
-
-	$filename = $_FILES["uploadfile"]["name"];
-	$tempname = $_FILES["uploadfile"]["tmp_name"];
-	$folder = "./image/" . $filename;
-
-	$db = mysqli_connect("localhost", "root", "", "lms");
-
-	// Get all the submitted data from the form
-	$sql = "INSERT INTO images (name) VALUES ('$filename')";
-
-	// Execute query
-	mysqli_query($db, $sql);
-
-	// Now let's move the uploaded image into the folder: image
-	if (move_uploaded_file($tempname, $folder)) {
-		echo "<h3> Image uploaded successfully!</h3>";
-	} else {
-		echo "<h3> Failed to upload image!</h3>";
-	}
-}
+ 
+$dataPoints = array(
+	array("label"=> "WordPress", "y"=> 60.0),
+	array("label"=> "Joomla", "y"=> 6.5),
+	array("label"=> "Drupal", "y"=> 4.6),
+	array("label"=> "Magento", "y"=> 2.4),
+	array("label"=> "Blogger", "y"=> 1.9),
+	array("label"=> "Shopify", "y"=> 1.8),
+	array("label"=> "Bitrix", "y"=> 1.5),
+	array("label"=> "Squarespace", "y"=> 1.5),
+	array("label"=> "PrestaShop", "y"=> 1.3),
+	array("label"=> "Wix", "y"=> 0.9),
+	array("label"=> "OpenCart", "y"=> 0.8)
+);
+	
 ?>
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-
-<head>
-	<title>Image Upload</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-
-<body>
-	<div id="content">
-		<form method="POST" action="" enctype="multipart/form-data">
-            
-			<div class="form-group">
-				<input class="form-control" type="file" name="uploadfile" value="" />
-			</div>
-			<div class="form-group">
-				<button class="btn btn-primary" type="submit" name="upload">UPLOAD</button>
-			</div>
-		</form>
-	</div>
-	<div id="display-image">
-		<?php
-		$query = " select name from images ";
-		$result = mysqli_query($db, $query);
-
-		while ($data = mysqli_fetch_assoc($result)) {
-		?>
-			<img src="./image/<?php echo $data['name']; ?>">
-
-		<?php
+<head>  
+<script>
+window.onload = function () {
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title: {
+		text: "CMS Market Share - 2017"
+	},
+	axisY: {
+		suffix: "%",
+		scaleBreaks: {
+			autoCalculate: true
 		}
-		?>
-	</div>
-</body>
-
-</html>
-   <!-- <?php
-     
-     $server="localhost";
-     $username="root";
-     $password="";
-     $database="lms";
-
-         //create connection
-     $con=new mysqli($server,$username,$password, $database);   
-          
-     if(isset($_POST['submit'])) {
-      $filename = $_FILES["uploadfile"]["name"];
-      $tempname = $_FILES["uploadfile"]["tmp_name"];
-      $folder = "./notes/" . $filename;
-
-      $sql_insert = "INSERT INTO subject(name,document)
-      VALUES('$subject', '$filename')";
-
-      mysqli_query($con,$sql_insert);
-  
-      move_uploaded_file($tempname, $folder);
-   
+	},
+	data: [{
+		type: "column",
+		yValueFormatString: "#,##0\"%\"",
+		indexLabel: "{y}",
+		indexLabelPlacement: "inside",
+		indexLabelFontColor: "white",
+		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+chart.render();
+ 
 }
-  $con->close();
-
-     
-
-        ?> 
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>                
